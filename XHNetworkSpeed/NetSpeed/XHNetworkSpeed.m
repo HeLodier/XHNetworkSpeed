@@ -188,13 +188,17 @@ static XHNetworkSpeed * instance = nil;
     
     
     if (_iBytes != 0) {
-        self.receivedSpeedBlock([[self bytesToAvaiUnit:iBytes - _iBytes] stringByAppendingString:@"/s"]);
+        if (self.receivedSpeedBlock) {
+            self.receivedSpeedBlock([[self bytesToAvaiUnit:iBytes - _iBytes] stringByAppendingString:@"/s"]);
+        }
     }
     
     _iBytes = iBytes;
     
     if (_oBytes != 0) {
-        self.sendSpeedBlock([[self bytesToAvaiUnit:oBytes - _oBytes] stringByAppendingString:@"/s"]);
+        if (self.sendSpeedBlock) {
+            self.sendSpeedBlock([[self bytesToAvaiUnit:oBytes - _oBytes] stringByAppendingString:@"/s"]);
+        }
     }
     _oBytes = oBytes;
 }
