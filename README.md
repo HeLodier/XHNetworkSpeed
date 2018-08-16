@@ -4,7 +4,7 @@
 使用方法:
 1. 开始监听网络速度
     
-    [[XHNetworkSpeed shareNetworkSpeed]startMonitoringNetworkSpeed];
+         [[XHNetworkSpeed shareNetworkSpeed]startMonitoringNetworkSpeed];
 
 2. 网络速度回调
       
@@ -23,4 +23,4 @@
 
 3. 停止网络监听
    
-   [[XHNetworkSpeed shareNetworkSpeed]stopMonitoringNetworkSpeed];
+         [[XHNetworkSpeed shareNetworkSpeed]stopMonitoringNetworkSpeed];
